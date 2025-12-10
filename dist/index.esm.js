@@ -2,8 +2,8 @@ import dayjs from'dayjs';/******************************************************
  * 시간을 00:00:00.0 으로 변경해서 반환
  * ******************************************************************************************************************/
 function beginDateOfDay(dtOrYear, formatOrMonth, day) {
-    var dt;
-    var format;
+    let dt;
+    let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number' && typeof day === 'number') {
         dt = new Date(dtOrYear, formatOrMonth - 1, day);
     }
@@ -21,8 +21,8 @@ function beginDateOfDay(dtOrYear, formatOrMonth, day) {
  * 날짜를 1일로 바꾸고, 시간을 00:00:00.0 으로 변경해서 반환
  * ******************************************************************************************************************/
 function beginDateOfMonth(dtOrYear, formatOrMonth) {
-    var dt;
-    var format;
+    let dt;
+    let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number') {
         dt = new Date(dtOrYear, formatOrMonth - 1, 1);
     }
@@ -40,8 +40,8 @@ function beginDateOfMonth(dtOrYear, formatOrMonth) {
  * 시간을 23:59:59.999 로 변경해서 반환
  * ******************************************************************************************************************/
 function endDateOfDay(dtOrYear, formatOrMonth, day) {
-    var dt;
-    var format;
+    let dt;
+    let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number' && typeof day === 'number') {
         dt = new Date(dtOrYear, formatOrMonth - 1, day);
     }
@@ -59,8 +59,8 @@ function endDateOfDay(dtOrYear, formatOrMonth, day) {
  * 날짜를 월의 마지막 일로 바꾸고, 시간을 23:59:59.999 로 변경해서 반환
  * ******************************************************************************************************************/
 function endDateOfMonth(dtOrYear, formatOrMonth) {
-    var dt;
-    var format;
+    let dt;
+    let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number') {
         dt = new Date(dtOrYear, formatOrMonth - 1, 1);
     }
@@ -81,7 +81,7 @@ function endDateOfMonth(dtOrYear, formatOrMonth) {
  * @returns 분해된 날짜
  * ******************************************************************************************************************/
 function extractDate(dt) {
-    var date = dayjs(dt);
+    const date = dayjs(dt);
     return {
         date: date.toDate(),
         year: date.year(),
@@ -154,8 +154,8 @@ function weekdayText(weekDay) {
     endOfMonth: endDateOfMonth,
     extract: extractDate,
     format: formatDate,
-    now: now,
-    nowJs: nowJs,
-    nowTime: nowTime,
-    weekdayText: weekdayText,
+    now,
+    nowJs,
+    nowTime,
+    weekdayText,
 };export{beginDateOfDay,beginDateOfMonth,index as default,endDateOfDay,endDateOfMonth,extractDate,formatDate,now,nowJs,nowTime,weekdayText};
