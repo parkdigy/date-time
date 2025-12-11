@@ -2,7 +2,7 @@
   "name": "@pdg/date-time",
   "title": "Typescript Date Time Module",
   "description": "Typescript Date Time Module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
