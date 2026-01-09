@@ -6,7 +6,7 @@
  * @returns 형식화된 날짜
  * ******************************************************************************************************************/
 
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 export function formatDate<
   T extends Dayjs | Date | string | null | undefined,

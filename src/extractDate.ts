@@ -5,7 +5,7 @@
  * @returns 분해된 날짜
  * ******************************************************************************************************************/
 
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 export function extractDate(dt?: Date | Dayjs): {
   date: Date;

@@ -2,7 +2,7 @@
  * 시간을 23:59:59.999 로 변경해서 반환
  * ******************************************************************************************************************/
 
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 export function endDateOfDay(): Date;
 export function endDateOfDay<T extends Date | Dayjs>(dt: T): T;

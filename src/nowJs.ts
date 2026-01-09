@@ -2,7 +2,7 @@
  * 현재 시간의 Dayjs 객체를 반환하는 함수
  * ******************************************************************************************************************/
 
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 export function nowJs(): Dayjs {
   return dayjs();

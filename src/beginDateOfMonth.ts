@@ -2,7 +2,7 @@
  * 날짜를 1일로 바꾸고, 시간을 00:00:00.0 으로 변경해서 반환
  * ******************************************************************************************************************/
 
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 export function beginDateOfMonth(): Date;
 export function beginDateOfMonth<T extends Date | Dayjs>(dt: T): T;
