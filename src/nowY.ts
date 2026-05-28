@@ -1,6 +1,8 @@
-import { type Dayjs } from 'dayjs';
 /********************************************************************************************************************
- * 현재 시간의 Dayjs 객체를 반환하는 함수
+ * 현재 년도를 YYYY 형식의 숫자로 반환하는 함수
  * ******************************************************************************************************************/
-export declare function nowJs(): Dayjs;
-export default nowJs;
+export function nowY(): number {
+  return new Date().getFullYear();
+}
+
+export default nowY;

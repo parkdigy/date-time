@@ -1,9 +1,8 @@
+import dayjs, { type Dayjs } from 'dayjs';
+
 /********************************************************************************************************************
  * 날짜를 월의 마지막 일로 바꾸고, 시간을 23:59:59.999 로 변경해서 반환
  * ******************************************************************************************************************/
-
-import dayjs, { type Dayjs } from 'dayjs';
-
 export function endDateOfMonth(): Date;
 export function endDateOfMonth<T extends Date | Dayjs>(dt: T): T;
 export function endDateOfMonth(dt: string, format?: string): Date;

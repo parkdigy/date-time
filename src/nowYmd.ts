@@ -1,6 +1,10 @@
-import { type Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
+
 /********************************************************************************************************************
- * 현재 시간의 Dayjs 객체를 반환하는 함수
+ * 현재 년월일을 YYYYMMDD 형식의 숫자로 반환하는 함수
  * ******************************************************************************************************************/
-export declare function nowJs(): Dayjs;
-export default nowJs;
+export function nowYmd(): number {
+  return Number(dayjs().format('YYYYMMDD'));
+}
+
+export default nowYmd;

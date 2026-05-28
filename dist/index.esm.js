@@ -1,7 +1,4 @@
-import dayjs from'dayjs';/********************************************************************************************************************
- * 시간을 00:00:00.0 으로 변경해서 반환
- * ******************************************************************************************************************/
-function beginDateOfDay(dtOrYear, formatOrMonth, day) {
+import dayjs from'dayjs';function beginDateOfDay(dtOrYear, formatOrMonth, day) {
     let dt;
     let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number' && typeof day === 'number') {
@@ -17,10 +14,7 @@ function beginDateOfDay(dtOrYear, formatOrMonth, day) {
     else {
         return dayjs(dt).startOf('day');
     }
-}/********************************************************************************************************************
- * 날짜를 1일로 바꾸고, 시간을 00:00:00.0 으로 변경해서 반환
- * ******************************************************************************************************************/
-function beginDateOfMonth(dtOrYear, formatOrMonth) {
+}function beginDateOfMonth(dtOrYear, formatOrMonth) {
     let dt;
     let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number') {
@@ -36,10 +30,7 @@ function beginDateOfMonth(dtOrYear, formatOrMonth) {
     else {
         return dayjs(dt).startOf('month');
     }
-}/********************************************************************************************************************
- * 시간을 23:59:59.999 로 변경해서 반환
- * ******************************************************************************************************************/
-function endDateOfDay(dtOrYear, formatOrMonth, day) {
+}function endDateOfDay(dtOrYear, formatOrMonth, day) {
     let dt;
     let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number' && typeof day === 'number') {
@@ -55,10 +46,7 @@ function endDateOfDay(dtOrYear, formatOrMonth, day) {
     else {
         return dayjs(dt).endOf('day');
     }
-}/********************************************************************************************************************
- * 날짜를 월의 마지막 일로 바꾸고, 시간을 23:59:59.999 로 변경해서 반환
- * ******************************************************************************************************************/
-function endDateOfMonth(dtOrYear, formatOrMonth) {
+}function endDateOfMonth(dtOrYear, formatOrMonth) {
     let dt;
     let format;
     if (typeof dtOrYear === 'number' && typeof formatOrMonth === 'number') {
@@ -126,6 +114,78 @@ function nowJs() {
 function nowTime() {
     return new Date().getTime();
 }/********************************************************************************************************************
+ * 현재 년도를 YYYY 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowY() {
+    return new Date().getFullYear();
+}/********************************************************************************************************************
+ * 현재 년월을 YYYYMM 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowYm() {
+    return Number(dayjs().format('YYYYMM'));
+}/********************************************************************************************************************
+ * 현재 년월일을 YYYYMMDD 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowYmd() {
+    return Number(dayjs().format('YYYYMMDD'));
+}/********************************************************************************************************************
+ * 현재 년월일시를 YYYYMMDDHH 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowYmdh() {
+    return Number(dayjs().format('YYYYMMDDHH'));
+}/********************************************************************************************************************
+ * 현재 년월일시분을 YYYYMMDDHHmm 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowYmdhm() {
+    return Number(dayjs().format('YYYYMMDDHHmm'));
+}/********************************************************************************************************************
+ * 현재 년월일시분초를 YYYYMMDDHHmmss 형식의 숫자로 반환하는 함수
+ * ******************************************************************************************************************/
+function nowYmdhms() {
+    return Number(dayjs().format('YYYYMMDDHHmmss'));
+}function getY(dt, format) {
+    if (dt === undefined) {
+        return new Date().getFullYear();
+    }
+    else {
+        return dayjs(dt, format).year();
+    }
+}function getYm(dt, format) {
+    if (dt === undefined) {
+        return Number(dayjs().format('YYYYMM'));
+    }
+    else {
+        return Number(dayjs(dt, format).format('YYYYMM'));
+    }
+}function getYmd(dt, format) {
+    if (dt === undefined) {
+        return Number(dayjs().format('YYYYMMDD'));
+    }
+    else {
+        return Number(dayjs(dt, format).format('YYYYMMDD'));
+    }
+}function getYmdh(dt, format) {
+    if (dt === undefined) {
+        return Number(dayjs().format('YYYYMMDDHH'));
+    }
+    else {
+        return Number(dayjs(dt, format).format('YYYYMMDDHH'));
+    }
+}function getYmdhm(dt, format) {
+    if (dt === undefined) {
+        return Number(dayjs().format('YYYYMMDDHHmm'));
+    }
+    else {
+        return Number(dayjs(dt, format).format('YYYYMMDDHHmm'));
+    }
+}function getYmdhms(dt, format) {
+    if (dt === undefined) {
+        return Number(dayjs().format('YYYYMMDDHHmmss'));
+    }
+    else {
+        return Number(dayjs(dt, format).format('YYYYMMDDHHmmss'));
+    }
+}/********************************************************************************************************************
  * week day 에 해당하는 요일을 한글로 반환하는 함수
  * ******************************************************************************************************************/
 function weekdayText(weekDay) {
@@ -157,5 +217,17 @@ function weekdayText(weekDay) {
     now,
     nowJs,
     nowTime,
+    nowY,
+    nowYm,
+    nowYmd,
+    nowYmdh,
+    nowYmdhm,
+    nowYmdhms,
+    getY,
+    getYm,
+    getYmd,
+    getYmdh,
+    getYmdhm,
+    getYmdhms,
     weekdayText,
-};export{beginDateOfDay,beginDateOfMonth,index as default,endDateOfDay,endDateOfMonth,extractDate,formatDate,now,nowJs,nowTime,weekdayText};
+};export{beginDateOfDay,beginDateOfMonth,index as default,endDateOfDay,endDateOfMonth,extractDate,formatDate,getY,getYm,getYmd,getYmdh,getYmdhm,getYmdhms,now,nowJs,nowTime,nowY,nowYm,nowYmd,nowYmdh,nowYmdhm,nowYmdhms,weekdayText};

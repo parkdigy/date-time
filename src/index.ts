@@ -7,6 +7,18 @@ export * from './formatDate';
 export * from './now';
 export * from './nowJs';
 export * from './nowTime';
+export * from './nowY';
+export * from './nowYm';
+export * from './nowYmd';
+export * from './nowYmdh';
+export * from './nowYmdhm';
+export * from './nowYmdhms';
+export * from './getY';
+export * from './getYm';
+export * from './getYmd';
+export * from './getYmdh';
+export * from './getYmdhm';
+export * from './getYmdhms';
 export * from './weekdayText';
 
 import beginDateOfDay from './beginDateOfDay';
@@ -18,6 +30,18 @@ import formatDate from './formatDate';
 import now from './now';
 import nowJs from './nowJs';
 import nowTime from './nowTime';
+import nowY from './nowY';
+import nowYm from './nowYm';
+import nowYmd from './nowYmd';
+import nowYmdh from './nowYmdh';
+import nowYmdhm from './nowYmdhm';
+import nowYmdhms from './nowYmdhms';
+import getY from './getY';
+import getYm from './getYm';
+import getYmd from './getYmd';
+import getYmdh from './getYmdh';
+import getYmdhm from './getYmdhm';
+import getYmdhms from './getYmdhms';
 import weekdayText from './weekdayText';
 
 export default {
@@ -30,5 +54,17 @@ export default {
   now,
   nowJs,
   nowTime,
+  nowY,
+  nowYm,
+  nowYmd,
+  nowYmdh,
+  nowYmdhm,
+  nowYmdhms,
+  getY,
+  getYm,
+  getYmd,
+  getYmdh,
+  getYmdhm,
+  getYmdhms,
   weekdayText,
 };
