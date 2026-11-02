@@ -2,12 +2,12 @@
 
 ## 프로젝트
 
-TypeScript 라이브러리를 npm 패키지로 만들기 위한 템플릿이다. 현재 공개 기능은 없으며 `src/index.ts`는 빈 내보내기만 가진다. 서비스나 웹 애플리케이션을 전제로 설계하지 않는다.
+`@pdg/date-time`은 `dayjs`를 사용하는 TypeScript 날짜·시간 유틸리티 npm 패키지다. `src/index.ts`는 named export와 별칭을 가진 default 객체를 제공한다. 서비스나 웹 애플리케이션을 전제로 설계하지 않는다.
 
 - 구현과 공개 API: `src/`, `src/index.ts`
 - 동작 검증: `test/`
 - 사용 예제: `examples/src/` (별도 npm 프로젝트)
-- 빌드 결과: `dist/` (생성 파일이므로 직접 수정하지 않는다)
+- 빌드 결과: `dist/` (Git 추적 대상인 생성 파일이며 직접 수정하지 않는다)
 - 프로젝트 분석과 설정상 주의점: [구조 문서](docs/agents/project.md)
 - 반복 코딩 절차: [코딩 스킬](.agents/skills/npm-package-development/SKILL.md)
 
